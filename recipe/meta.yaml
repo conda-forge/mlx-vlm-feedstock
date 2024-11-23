@@ -1,13 +1,13 @@
 {% set name = "mlx-vlm" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mlx_vlm-{{ version }}.tar.gz
-  sha256: ce53cc24faf23ea4052f8c1bac0a782d5483028d23768516779e1be0024637c6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mlx_vlm-{{ version }}.tar.gz
+  sha256: 37aa06698ccb35f21afa716c4ebbe14bcc8b20b14feab4d49f216b40e56d806c
 
 build:
   noarch: python
