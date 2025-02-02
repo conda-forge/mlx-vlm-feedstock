@@ -1,5 +1,5 @@
 {% set name = "mlx-vlm" %}
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mlx_vlm-{{ version }}.tar.gz
-  sha256: 039a8d9afa9c1aa4f753eb3658199350aaaac51c6ad195540289911ff2021f2c
+  sha256: eaf033af20b5fcd208b037ecc660df1ccff63e3b9e90b4545b76547a9b48c6ec
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - opencv ==4.10.0.84
     - datasets >=2.19.1
     - tqdm >=4.66.2
     - scipy ==1.13.1
