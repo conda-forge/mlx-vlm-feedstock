@@ -1,5 +1,5 @@
 {% set name = "mlx-vlm" %}
-{% set version = "0.1.15" %}
+{% set version = "0.1.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mlx_vlm-{{ version }}.tar.gz
-  sha256: 7c74ab3f72967f4783bf766b0c30825cf98d349cf162b504dc7742e12b9bc1fc
+  sha256: db7a9a4e02035670bf1cf324b57d5dd555e8b6b825889b95c4910cda04f47fd8
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - datasets >=2.19.1
     - tqdm >=4.66.2
     - scipy ==1.13.1
-    - gradio >=4.44.0
+    - gradio >=5.19.0
     - python >={{ python_min }}
     - mlx >=0.22.0
     - mlx-lm >=0.21.5
