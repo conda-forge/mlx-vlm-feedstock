@@ -1,5 +1,5 @@
 {% set name = "mlx-vlm" %}
-{% set version = "0.1.15" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mlx_vlm-{{ version }}.tar.gz
-  sha256: 7c74ab3f72967f4783bf766b0c30825cf98d349cf162b504dc7742e12b9bc1fc
+  sha256: 10044d5d3ab9bbb0bf0f4cd836a39fd8751bac44452a2a6735dc98925fd228fb
 
 build:
   noarch: python
@@ -23,16 +23,20 @@ requirements:
     - setuptools
     - sed
   run:
+    - fastapi >=0.95.1
+    - mlx-audio
+    - opencv ==4.10.0.84
+    - soundfile >=0.13.1
     - py-opencv 4.10.0.*
     - datasets >=2.19.1
     - tqdm >=4.66.2
-    - scipy ==1.13.1
-    - gradio >=4.44.0
+    - scipy >=1.15.3
+    - gradio >=5.19.0
     - python >={{ python_min }}
-    - mlx >=0.22.0
-    - mlx-lm >=0.21.5
-    - numpy >=1.23.4
-    - transformers >=4.49.0
+    - mlx >=0.26.0
+    - mlx-lm >=0.23.0
+    - numpy
+    - transformers >=4.53.0
     - pytorch
     - huggingface_hub
     - pillow >=10.3.0
