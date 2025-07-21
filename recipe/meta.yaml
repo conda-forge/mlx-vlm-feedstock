@@ -11,7 +11,9 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - sed -i 's/opencv-python==4.10.0.84/opencv-python>=4.10,<4.11/g' requirements.txt
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -19,8 +21,9 @@ requirements:
     - python {{ python_min }}
     - pip
     - setuptools
+    - sed
   run:
-    - opencv ==4.10.0.84
+    - py-opencv 4.10.0.*
     - datasets >=2.19.1
     - tqdm >=4.66.2
     - scipy ==1.13.1
