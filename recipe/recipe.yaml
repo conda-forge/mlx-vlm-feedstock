@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: 0.1.25
+  version: 0.1.26
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: 4d5e3b1496a4a944d722738bf2ce654b598c011064d2ca0a0292acc7e3b58217
+  sha256: a542eb3651a406894e5254fefab6c348a6cbe8bbb382b16b65d7a81666c9430b
 
 build:
   number: 0
@@ -40,6 +40,7 @@ requirements:
     - huggingface_hub
     - pillow >=10.3.0
     - requests >=2.31.0
+    - fastapi >=0.95.1
 
 tests:
   - python:
