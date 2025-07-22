@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: 0.1.26
+  version: 0.1.27
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: a542eb3651a406894e5254fefab6c348a6cbe8bbb382b16b65d7a81666c9430b
+  sha256: 895b62f8022db12b43acd1d7935eae498caa8d7493f99f27c15d78f260d8879a
 
 build:
   number: 0
@@ -32,8 +32,8 @@ requirements:
     - scipy ==1.13.1
     - gradio >=5.19.0
     - python >=${{ python_min }}
-    - mlx >=0.25.0
-    - mlx-lm >=0.23.0
+    - mlx >=0.26.0
+    - mlx-lm >=0.25.1
     - numpy >=1.23.4
     - transformers >=4.51.3
     - pytorch
