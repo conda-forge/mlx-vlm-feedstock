@@ -16,7 +16,7 @@ build:
   number: 0
   noarch: python
   script:
-    - sed -i 's/opencv-python==4.12.0.88/opencv-python>=4.12/g' requirements.txt
+    - sed -i 's/opencv-python>=4.12.0.88/opencv-python>=4.12/g' requirements.txt
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
