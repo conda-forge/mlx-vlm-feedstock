@@ -16,7 +16,7 @@ build:
   number: 0
   noarch: python
   script:
-    - sed -i 's/opencv-python==4.10.0.84/opencv-python>=4.10,<4.11/g' requirements.txt
+    - sed -i 's/opencv-python==4.12.0.88/opencv-python>=4.12/g' requirements.txt
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -26,21 +26,20 @@ requirements:
     - setuptools
     - sed
   run:
-    - py-opencv 4.10.0.*
-    - datasets >=2.19.1
-    - tqdm >=4.66.2
-    - scipy ==1.13.1
-    - gradio >=5.19.0
     - python >=${{ python_min }}
     - mlx >=0.26.0
-    - mlx-lm >=0.25.1
-    - numpy >=1.23.4
-    - transformers >=4.51.3
-    - pytorch
-    - huggingface_hub
+    - datasets >=2.19.1
+    - tqdm >=4.66.2
+    - transformers >=4.53.0
     - pillow >=10.3.0
     - requests >=2.31.0
+    - mlx-lm >=0.23.0
     - fastapi >=0.95.1
+    - pysoundfile >=0.13.1
+    - scipy >=1.15.3
+    - py-opencv >=4.12.0
+    - numpy
+    - uvicorn
 
 tests:
   - python:
