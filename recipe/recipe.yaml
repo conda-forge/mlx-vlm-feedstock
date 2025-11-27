@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: "0.3.7"
+  version: "0.3.8"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: b30663d092d53de878b53f9d740dc731d008e0f6af1e79445e9d06de9fbb7e93
+  sha256: 869cad15900da6f59c67433841b314c49005124947dd871b0a81d515d0615adc
 
 build:
   number: 0
