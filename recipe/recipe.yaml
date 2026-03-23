@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: "0.4.0"
+  version: "0.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: 2618faaea759bb5c083e171300849bec8713e33e3a4343e5a5165af04691635c
+  sha256: 4e2d8a232715dbca72d346f43cf54d5738452848855792ffb1b285228ae7c7bd
 
 build:
   number: 0
@@ -40,6 +40,7 @@ requirements:
     - py-opencv >=4.12.0
     - numpy
     - uvicorn
+    - miniaudio
 
 tests:
   - python:
