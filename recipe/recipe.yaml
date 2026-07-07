@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: "0.6.3"
+  version: 0.6.4
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: f5541eb7c22345a951f7fb78376ed80e8e42bd7c179fb0daa40a21592c7b2adb
+  sha256: 2a911692aedc3861ae26f4057b1c05dcb9abfb954d50123df3ef63eab0c58e29
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - mlx >=0.31.2
     - datasets >=2.19.1
     - tqdm >=4.66.2
-    - transformers >=5.5.0
+    - transformers <5.13.0,>=5.5.0
     - pillow >=10.3.0
     - requests >=2.31.0
     - mlx-lm >=0.31.3
@@ -42,6 +42,7 @@ requirements:
     - mlx-audio >=0.4.3
     - llguidance >=1.7.0
     - starlette >=1.0.1
+    - python-multipart >=0.0.9
 tests:
   - python:
       python_version: ${{ python_min }}.*
