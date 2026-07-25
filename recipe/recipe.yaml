@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: "0.6.6"
+  version: 0.6.7
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: 6556b66ab2301c4891f437c06d4e04bbe1ec166cab623e90d6a2e338e38b98d0
+  sha256: bde08ab72557b8f60ca6ee7bc88e883e1dbe90c948d035e7db22f0e71d067808
 
 build:
   number: 0
@@ -28,7 +28,6 @@ requirements:
   run:
     - python >=${{ python_min }}
     - mlx >=0.32.0
-    - datasets >=2.19.1
     - tqdm >=4.66.2
     - transformers >=5.14.0
     - pillow >=10.3.0
