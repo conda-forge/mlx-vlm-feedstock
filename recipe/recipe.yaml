@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: mlx-vlm
-  version: 0.6.14
+  version: 0.6.15
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mlx_vlm-${{ version }}.tar.gz
-  sha256: 661530e5e9a1b2e41c4546f36c71989d94f51ecafe0b78fabe7dbd1e92ecc9fb
+  sha256: 26914c41b92762ef262c4409b9ad91fa1e3968a085581c9a63b4dbcae987b743
 
 build:
   number: 0
@@ -42,6 +42,7 @@ requirements:
     - starlette >=1.0.1
     - python-multipart >=0.0.9
     - websockets >=14.0
+    - sentencepiece >=0.2.0
 tests:
   - python:
       python_version: ${{ python_min }}.*
